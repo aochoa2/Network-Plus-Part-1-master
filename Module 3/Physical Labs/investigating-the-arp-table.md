@@ -1,4 +1,6 @@
 # 🧪 Lab: Investigating the ARP Table and Protocol 
+Aida Ochoa
+08/26/25
 
 ## 🧭 Objective
 
@@ -27,8 +29,7 @@ This lab will guide you through:
    arp -a
    ```
 3. Observe the output. You should see a list of IP addresses and their corresponding MAC addresses.
-
-![Insert Screenshot Here]()
+![alt text](image.png)
 
 ## 🎯 Step 2: Identify a Target Device
 1. Choose another device on your network (e.g., phone, tablet, another PC).
@@ -42,7 +43,9 @@ This lab will guide you through:
     ```
 4. Run the `arp -a` command again to confirm the target device appears in the ARP table
 
-![Insert screenshot here]()
+![alt text](image-2.png)
+![alt text](image-1.png)
+![alt text](image-3.png)
 
 ## 🧪 Step 3: Capture ARP Traffic with Wireshark
 
@@ -58,12 +61,16 @@ This lab will guide you through:
     ```
 5. Observe ARP request and reply packets in Wireshark 
 
-![Insert screenshot here]()
+![alt text](image-4.png)
 
 ***
 
 ## 🧠 Reflection Questions
 1. What does the ARP table tell you about your local network?
+An ARP table tells us which IP address have communicated with which MAC address. Which IP address is trying to communicate with which MAC address. Only the matching pairs receive a response and the ARP table stores this data for future use. It shows us what devices are on our network.
 2. Why might an ARP entry be missing?
+An ARP table could be missing due to the device not having made any connections yet and there is nothing to display. An ARP table will only show any sent or received local network traffic or if there is no internet for the device to communicate to.
 3. What happens when you clear the ARP cache?
+Clearing the ARP table cache will delete any connections it has made thus far and will have to reconnect the IP addresses and the MAC addresses all over again. Which is no problem but it could take longer since those connections were lost.
 4. How does Wireshark help visualize Layer 2 communication?
+Wireshark helps us visualize these connections being made in real time, we can see which MAC address is trying to communicate with which MAC address, the sender and the target. Which protocol type, hardware type and size it is.
