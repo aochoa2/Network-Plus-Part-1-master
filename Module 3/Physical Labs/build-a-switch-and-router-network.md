@@ -1,5 +1,6 @@
 # Lab - Use Ping and Traceroute to Test Network Connectivity
 Aida Ochoa
+08/26/25
 ## Topology & Addressing Table
 
 | Device | Interface     | IP Address / Prefix         | Default Gateway     |
